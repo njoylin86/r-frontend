@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-const endPoint = "http://localhost/r-backend/terminate-all-backend/api/";
+const endPoint = "https://njoylin.tech/rhyme_backend/api";
 
 class Articles extends Component{
     state = {
@@ -9,7 +9,7 @@ class Articles extends Component{
     }
 
      componentDidMount(){
-        axios.get(endPoint + 'getall')
+        axios.get(endPoint + '/getall')
             .then(res => {
                 const articles =  res.data;
                 this.setState({ articles });
